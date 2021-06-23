@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
         "packagesPath": "C:\\Users\\Marcos Roberto\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+=======
+    "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "projectName": "senai.hroads.webApi",
+        "projectPath": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+>>>>>>> 69a75f91d822ba4a39773fc880b22476ed2379b1
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marcos Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +53,22 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
