@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48784309822\\Desktop\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
+    "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48784309822\\Desktop\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
+    "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "projectUniqueName": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
         "projectName": "senai.hroads.webApi",
-        "projectPath": "C:\\Users\\48784309822\\Desktop\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
-        "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48784309822\\Desktop\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+        "projectPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "packagesPath": "C:\\Users\\Marcos Roberto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto HROADS\\BackEnd\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\48784309822\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marcos Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
