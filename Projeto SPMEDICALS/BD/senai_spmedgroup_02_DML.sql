@@ -13,17 +13,17 @@ GO
 
 --- Criando registros na tabela Usuario
 
-INSERT INTO Usuario (IdTipoUsuario, NomeUsuario, Email, Senha)
-VALUES				(1, 'Marcos66', 'marcos.adm@gmail.com', 'Marcos123'),
-					(2, 'Sara43', 'Sarinha44@gmail.com', 'Sara123'),
-					(2, 'Derek444', 'Derek_mm@gmail.com', 'Derek123'),
-					(3, 'Leticia33', 'Lele02@gmail.com', 'Leticia123'),
-					(3, 'Brenda222', 'Brenda32@gmail.com', 'Brebda222'),
-					(3, 'David243', 'Devid6@gmail.com', 'David'),
-					(3, 'Pedro88', 'pedrada2@gmail.com', 'Pedro123'),
-					(2, 'Kaio76', 'Kaio99@gmail.com', 'Kaio123'),
-					(2, 'Ester432', 'ester@gmail.com', 'Ester123'),
-					(2, 'Raquel23', 'raquel23@gmail.com', 'Raquel123');
+INSERT INTO Usuario (IdTipoUsuario, Email, Senha)
+VALUES				(1, 'marcos.adm@gmail.com', 'Marcos123'),
+					(2, 'Sarinha44@gmail.com', 'Sara123'),
+					(2, 'Derek_mm@gmail.com', 'Derek123'),
+					(3, 'Lele02@gmail.com', 'Leticia123'),
+					(3, 'Brenda32@gmail.com', 'Brebda222'),
+					(3, 'Devid6@gmail.com', 'David'),
+					(3, 'pedrada2@gmail.com', 'Pedro123'),
+					(2, 'Kaio99@gmail.com', 'Kaio123'),
+					(2, 'ester@gmail.com', 'Ester123'),
+					(2, 'raquel23@gmail.com', 'Raquel123');
 GO
 
 --- Criando registros na tabela Especialidade
@@ -56,18 +56,18 @@ GO
 
 --- Criando registros na tabela Medico
 
-INSERT INTO Medico	(IdUsuario, IdEspecialidade, IdClinica, CRM)
-VALUES				(2, 4, 1, '45332 - SP'),
-					(3, 8, 1, '63985 - SP'),
-					(5, 16, 1, '97652- SP'),
-					(8, 17, 1, '88456 - SP');
+INSERT INTO Medico	(IdUsuario, IdEspecialidade, IdClinica, NomeMedico, CRM)
+VALUES				(2, 4, 1, 'Sara Silva', '45332 - SP'),
+					(3, 8, 1, 'Derek Santo', '63985 - SP'),
+					(5, 16, 1, 'Brenda Santos','97652- SP'),
+					(8, 17, 1, 'Kaio Silva', '88456 - SP');
 GO
 
 --- Criando registros na tabela Paciente
 
-INSERT INTO Paciente	(IdUsuario, Nome, RG, CPF, Endereco, DataNascimento, Telefone)
+INSERT INTO Paciente	(IdUsuario, NomePaciente, RG, CPF, Endereco, DataNascimento, Telefone)
 VALUES					(4, 'Leticia Silva', '509548889', '57565633224', 'Rua Baltzar Barroso, 20 - Guaianazes, São Paulo - SP - 99654-346', '20/02/2000', '11 20655312'),
-						(6, 'Derek', '678798435', '54642131689', 'Av. Paulista, 654 - Bela Vista , São Paulo - SP - 95679-921', '06/05/1997', '11 85639612'),
+						(6, 'David', '678798435', '54642131689', 'Av. Paulista, 654 - Bela Vista , São Paulo - SP - 95679-921', '06/05/1997', '11 85639612'),
 						(7, 'Pedro Souza', '129482301', '89890328443', 'Rua Luis Gomes, 344 - Jardim Moreno, São Paulo - SP - 12354-023', '12/12/1998', '11 95644535'),
 						(9, 'Ester Silva', '894020760', '86940345265', 'Av. Bandeira Gomes, 543 - Jardim Das Bandeiras, São Paulo - SP - 89545-981', '24/11/2001', '11 43894534');
 GO

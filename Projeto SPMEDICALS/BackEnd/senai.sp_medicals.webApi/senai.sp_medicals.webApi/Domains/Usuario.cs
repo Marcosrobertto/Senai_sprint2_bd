@@ -15,7 +15,6 @@ namespace senai.sp_medicals.webApi.Domains
 
         public int Idusuario { get; set; }
         public int? IdTipoUsuario { get; set; }
-        public string NomeUsuario { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
 

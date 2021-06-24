@@ -19,9 +19,8 @@ CREATE TABLE Usuario
 (
 		Idusuario INT PRIMARY KEY IDENTITY,
 		IdTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuario(IdTipoUsuario),
-		NomeUsuario VARCHAR (150) NOT NULL,
 		Email VARCHAR (150) UNIQUE NOT NULL,
-		Senha VARCHAR (150) UNIQUE NOT NULL
+		Senha VARCHAR (150) NOT NULL
 );
 GO
 
@@ -49,6 +48,7 @@ CREATE TABLE Medico
 		IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario),
 		IdEspecialidade INT FOREIGN KEY REFERENCES Especialidade(IdEspecialidade),
 		IdClinica INT FOREIGN KEY REFERENCES Clinica(IdClinica),
+		NomeMedico VARCHAR (150) NOT NULL,
 		CRM VARCHAR (100) UNIQUE NOT NULL
 
 );
@@ -58,7 +58,7 @@ CREATE TABLE Paciente
 (
 		IdPaciente INT PRIMARY KEY IDENTITY,
 		IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario),
-		Nome VARCHAR (50) NOT NULL,
+		NomePaciente VARCHAR (50) NOT NULL,
 		RG CHAR (10) UNIQUE NOT NULL,
 		CPF CHAR (11) UNIQUE NOT NULL,
 		Endereco VARCHAR (150) UNIQUE NOT NULL,
