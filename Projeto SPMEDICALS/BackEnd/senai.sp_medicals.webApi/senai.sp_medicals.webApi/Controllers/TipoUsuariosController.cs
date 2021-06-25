@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using senai.sp_medicals.webApi.Domains;
 using senai.sp_medicals.webApi.Interfaces;
 using senai.sp_medicals.webApi.Repositories;
 using System;
@@ -33,6 +34,73 @@ namespace senai.sp_medicals.webApi.Controllers
             }
             catch (Exception ex)
             {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpGet("{id}")]
+
+        public IActionResult GetById(int id)
+        {
+            try
+            {
+                return Ok(_tipoUsuariosRepository.BuscarPorId(id));
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpPost]
+
+        public IActionResult Post(TipoUsuario novoTipoUsuario)
+        {
+            try
+            {
+                _tipoUsuariosRepository.Cadastrar(novoTipoUsuario);
+
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+
+        [HttpPut("{id}")]
+
+        public IActionResult Put(int id, TipoUsuario tipoUsuarioAtulizado)
+        {
+            try
+            {
+                _tipoUsuariosRepository.Atualizar(id, tipoUsuarioAtulizado);
+
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _tipoUsuariosRepository.Deletar(id);
+
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+
                 return BadRequest(ex);
             }
         }

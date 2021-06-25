@@ -59,7 +59,7 @@ GO
 INSERT INTO Medico	(IdUsuario, IdEspecialidade, IdClinica, NomeMedico, CRM)
 VALUES				(2, 4, 1, 'Sara Silva', '45332 - SP'),
 					(3, 8, 1, 'Derek Santo', '63985 - SP'),
-					(5, 16, 1, 'Brenda Santos','97652- SP'),
+					(5, 16, 1, 'Brenda Santos', '97652- SP'),
 					(8, 17, 1, 'Kaio Silva', '88456 - SP');
 GO
 

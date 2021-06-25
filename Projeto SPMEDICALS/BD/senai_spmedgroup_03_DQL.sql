@@ -15,7 +15,7 @@ SELECT * FROM Consulta;
 
 --- O administrador pode cadastrar qualquer tipo de usúario (adimistrador, paciente ou médico)
 
-SELECT IdUsuario, NomeTipoUsuario, NomeUsuario, Email
+SELECT IdUsuario, NomeTipoUsuario, Email
 FROM Usuario
 INNER JOIN TipoUsuario
 ON Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario;
@@ -23,7 +23,7 @@ ON Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario;
 --- O administrador poderá agendar uma consulta, com as seguintes informações quem é o paciente, 
 --- data do agendamento e qual médico vai atender a consulta. o médico possui uma determinada especialidade
 
-SELECT IdConsulta, Nome, DataConsulta, CRM
+SELECT IdConsulta, NomePaciente, DataConsulta, CRM
 FROM Consulta
 INNER JOIN Medico
 ON Medico.IdMedico = Consulta.IdConsulta
@@ -45,7 +45,7 @@ FROM Clinica
 
 --- O médico poderá ver os agendamentos consultas associadas a ele
 
-SELECT CRM, Nome, DataConsulta, Descricao
+SELECT CRM, NomePaciente, DataConsulta, Descricao
 FROM Consulta
 INNER JOIN Medico
 ON Medico.IdMedico = Consulta.IdMedico
@@ -55,14 +55,14 @@ WHERE Medico.IdMedico = 3;
 
 --- O médico poderá incluir a descrição da consulta que estará vinculada ao paciente
 
-SELECT Nome, Descricao
+SELECT NomePaciente, Descricao
 FROM Paciente
 LEFT JOIN Consulta
 ON Consulta.IdConsulta = Paciente.IdPaciente;
 
 --- O paciente poderá visualizar suas próprias consultas
 
-SELECT Nome, DataConsulta, CRM, Descricao
+SELECT NomePaciente, DataConsulta, CRM, Descricao
 FROM Paciente
 INNER JOIN Consulta
 ON Consulta.IdConsulta = Paciente.IdPaciente

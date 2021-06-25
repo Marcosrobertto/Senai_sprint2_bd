@@ -15,22 +15,36 @@ namespace senai.sp_medicals.webApi.Repositories
 
         public void Atualizar(int id, TipoUsuario tipoUsuarioAtualizado)
         {
-            throw new NotImplementedException();
+            TipoUsuario tipoUsuarioBuscado = BuscarPorId(id);
+
+            if (tipoUsuarioAtualizado.NomeTipoUsuario != null)
+            {
+                tipoUsuarioBuscado.NomeTipoUsuario = tipoUsuarioAtualizado.NomeTipoUsuario;
+            }
+
+            ctx.TipoUsuarios.Update(tipoUsuarioBuscado);
+
+            ctx.SaveChanges();
         }
 
         public TipoUsuario BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.TipoUsuarios.FirstOrDefault(te => te.IdTipoUsuario == id);
         }
 
         public void Cadastrar(TipoUsuario novoTipoUsuario)
         {
-            throw new NotImplementedException();
+            ctx.TipoUsuarios.Add(novoTipoUsuario);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+
+            ctx.TipoUsuarios.Remove(BuscarPorId(id));
+
+            ctx.SaveChanges();
         }
 
         public List<TipoUsuario> Listar()
