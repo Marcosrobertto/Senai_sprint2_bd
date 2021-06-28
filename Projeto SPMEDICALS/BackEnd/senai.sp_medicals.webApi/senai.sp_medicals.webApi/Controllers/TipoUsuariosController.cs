@@ -21,7 +21,7 @@ namespace senai.sp_medicals.webApi.Controllers
 
         public TipoUsuariosController()
         {
-            _tipoUsuariosRepository = new TipoUsuarioRepository();
+            _tipoUsuariosRepository = new UsuarioRepository();
         }
 
         [HttpGet]

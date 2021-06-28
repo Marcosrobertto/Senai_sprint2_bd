@@ -15,17 +15,25 @@ namespace senai.sp_medicals.webApi.Repositories
 
         public void Atualizar(int id, Usuario usuarioAtualizado)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(id);
+
+            if ()
+            {
+
+            }
+
         }
 
         public Usuario BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.FirstOrDefault(te => te.Idusuario == id);
         }
 
         public void Cadastrar(Usuario novoUsuario)
         {
-            throw new NotImplementedException();
+            ctx.Usuarios.Add(novoUsuario);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
@@ -35,7 +43,7 @@ namespace senai.sp_medicals.webApi.Repositories
 
         public List<Usuario> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.ToList();
         }
 
         public Usuario Login(string email, string senha)
