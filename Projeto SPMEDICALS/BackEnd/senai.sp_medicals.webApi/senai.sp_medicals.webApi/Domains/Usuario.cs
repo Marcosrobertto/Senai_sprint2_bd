@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -13,9 +14,17 @@ namespace senai.sp_medicals.webApi.Domains
             Pacientes = new HashSet<Paciente>();
         }
 
+        //Define que o campo é obrigatório
+        [Required(ErrorMessage = "Informe o nome do usuário")]
         public int Idusuario { get; set; }
+
+        [Required(ErrorMessage = "Informe o e-mail")]
         public int? IdTipoUsuario { get; set; }
+
+        [Required(ErrorMessage = "Informe a senha")]
         public string Email { get; set; }
+
+        [StringLength(100, MinimumLength = 5, ErrorMessage = "A senha deve conter no mínimo 5 caracteres")]
         public string Senha { get; set; }
 
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
