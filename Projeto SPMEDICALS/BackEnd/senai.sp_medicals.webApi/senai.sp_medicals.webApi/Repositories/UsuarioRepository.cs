@@ -17,10 +17,19 @@ namespace senai.sp_medicals.webApi.Repositories
         {
             Usuario usuarioBuscado = BuscarPorId(id);
 
-            if ()
+            if (usuarioAtualizado.Email != null)
             {
-
+                usuarioBuscado.Email = usuarioAtualizado.Email;
             }
+            if (usuarioAtualizado.Senha != null)
+            {
+                usuarioBuscado.Senha = usuarioAtualizado.Senha;
+            }
+
+
+            ctx.Usuarios.Update(usuarioBuscado);
+
+            ctx.SaveChanges();
 
         }
 
@@ -38,7 +47,10 @@ namespace senai.sp_medicals.webApi.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            ctx.Usuarios.Remove(BuscarPorId(id));
+
+            ctx.SaveChanges();
+
         }
 
         public List<Usuario> Listar()

@@ -18,10 +18,10 @@ namespace senai.sp_medicals.webApi.Domains
         [Required(ErrorMessage = "Informe o nome do usuário")]
         public int Idusuario { get; set; }
 
-        [Required(ErrorMessage = "Informe o e-mail")]
+        [Required(ErrorMessage = "Informe o Id do Tipo Usuario")]
         public int? IdTipoUsuario { get; set; }
 
-        [Required(ErrorMessage = "Informe a senha")]
+        [Required(ErrorMessage = "Informe a E-mail")]
         public string Email { get; set; }
 
         [StringLength(100, MinimumLength = 5, ErrorMessage = "A senha deve conter no mínimo 5 caracteres")]
