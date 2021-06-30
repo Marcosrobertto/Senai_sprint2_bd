@@ -8,18 +8,11 @@ namespace senai.sp_medicals.webApi.Interfaces
 {
     interface IConsultaRepository
     {
-
-        int IdPaciente(int id);
-
-        int IdMedico(int id);
-
         Consultum BuscarPorId(int id);
 
         void MudarDescricao(int id, Consultum status);
 
-        void AprovarRecusar(int id, string status);
-
-        void Cadastar(Consultum novaConsulta);
+        void Cadastrar(Consultum novaConsulta);
 
         void AtualizarPorId(int id, Consultum consultaAtualizada);
 
@@ -27,9 +20,9 @@ namespace senai.sp_medicals.webApi.Interfaces
 
         List<Consultum> ListarTudo();
 
-        List<Consultum> ListarConsultasPaciente(int id);
+        List<Consultum> ListarConsultasPaciente();
 
-        List<Consultum> ListarConsultasMedico(int id);
+        List<Consultum> ListarConsultasMedico();
 
     }
 }

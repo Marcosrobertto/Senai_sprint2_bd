@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace senai.sp_medicals.webApi.Controllers
 {
 
-    [Produces("aplication/json")]
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
 
