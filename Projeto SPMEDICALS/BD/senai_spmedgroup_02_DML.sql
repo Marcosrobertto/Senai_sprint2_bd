@@ -14,16 +14,17 @@ GO
 --- Criando registros na tabela Usuario
 
 INSERT INTO Usuario (IdTipoUsuario, Email, Senha)
-VALUES				(1, 'marcos.adm@gmail.com', 'Marcos123'),
-					(2, 'Sarinha44@gmail.com', 'Sara123'),
-					(2, 'Derek_mm@gmail.com', 'Derek123'),
-					(3, 'Lele02@gmail.com', 'Leticia123'),
-					(3, 'Brenda32@gmail.com', 'Brebda222'),
-					(3, 'Devid6@gmail.com', 'David'),
-					(3, 'pedrada2@gmail.com', 'Pedro123'),
-					(2, 'Kaio99@gmail.com', 'Kaio123'),
-					(2, 'ester@gmail.com', 'Ester123'),
-					(2, 'raquel23@gmail.com', 'Raquel123');
+VALUES				(1, 'adm@adm.com', 'adm123'),
+					(2, 'ricardo.lemos@spmedicalgroup.com.br', 'ricardo123'),
+					(2, 'roberto.possarle@spmedicalgroup.com.br', 'possarle456'),
+					(2, 'helena.souza@spmedicalgroup.com.br', 'helena789'),
+					(3, 'ligia@gmail.com', 'ligia123'),
+					(3, 'alexandre@gmail.com', 'alexandre456'),
+					(3, 'fernando@gmail.com', 'fernando789'),
+					(3, 'henrique@gmail.com', 'henrique987'),
+					(3, 'joao@gmail.com', 'joao654'),
+					(3, 'bruno@gmail.com', 'bruno123'),
+					(3, 'mariana@outlook.com', 'mariana987')
 GO
 
 --- Criando registros na tabela Especialidade
@@ -51,25 +52,27 @@ GO
 --- Cliando registro na tabela Clinica
 
 INSERT INTO Clinica (NomeFantasia, Endereco, RazaoSocial, CNPJ)
-VALUES				('Clinica Marcos', 'Av. Luis Gomes Bandeiras 234, São Paulo - SP', 'Medical Group', '44555678744613');
+VALUES				('Clinica Possarle', 'Av. Barão Limeira, 532', 'SP Médical Group', '86400902000130');
 GO
 
 --- Criando registros na tabela Medico
 
 INSERT INTO Medico	(IdUsuario, IdEspecialidade, IdClinica, NomeMedico, CRM)
-VALUES				(2, 4, 1, 'Sara Silva', '45332 - SP'),
-					(3, 8, 1, 'Derek Santo', '63985 - SP'),
-					(5, 16, 1, 'Brenda Santos', '97652- SP'),
-					(8, 17, 1, 'Kaio Silva', '88456 - SP');
+VALUES				(2, 2, 1,'Ricardo Lemos','54356-SP'),
+				    (3, 17, 1, 'Roberto Possarle' ,'53852-SP'),
+				    (4, 16, 1, 'Helena Strada' ,'65463-SP');
 GO
 
 --- Criando registros na tabela Paciente
 
 INSERT INTO Paciente	(IdUsuario, NomePaciente, RG, CPF, Endereco, DataNascimento, Telefone)
-VALUES					(4, 'Leticia Silva', '509548889', '57565633224', 'Rua Baltzar Barroso, 20 - Guaianazes, São Paulo - SP - 99654-346', '20/02/2000', '11 20655312'),
-						(6, 'David', '678798435', '54642131689', 'Av. Paulista, 654 - Bela Vista , São Paulo - SP - 95679-921', '06/05/1997', '11 85639612'),
-						(7, 'Pedro Souza', '129482301', '89890328443', 'Rua Luis Gomes, 344 - Jardim Moreno, São Paulo - SP - 12354-023', '12/12/1998', '11 95644535'),
-						(9, 'Ester Silva', '894020760', '86940345265', 'Av. Bandeira Gomes, 543 - Jardim Das Bandeiras, São Paulo - SP - 89545-981', '24/11/2001', '11 43894534');
+VALUES					(5, 'Ligia', '435225435', '94839859000', 'Rua Estado de Israel 240, São Paulo, Estado de São Paulo, 04022-000', '10/03/1983', '1134567654'),
+						(6, 'Alexandre', '326543457', '73556944057', 'Av. Paulista, 1578 - Bela Vista, São Paulo - SP, 01310-200', '07/03/2001', '11987656543'),
+						(7, 'Fernando', '546365253', '16839338002', 'Av. Ibirapuera - Indianópolis, 2927,  São Paulo - SP, 04029-200', '10/10/1978', '11972084453'),
+						(8, 'Henrique', '543663625', '14332654765', 'R. Vitória, 120 - Vila Sao Jorge, Barueri - SP, 06402-030', '13/10/1985', '1134566543'),
+						(9, 'João', '325444441', '91305348010', 'R. Ver. Geraldo de Camargo, 66 - Santa Luzia, Ribeirão Pires - SP, 09405-380', '27/08/1975', '1176566377'),
+						(10, 'Bruno', '545662667', '79799299004', 'Alameda dos Arapanés, 945 - Indianópolis, São Paulo - SP, 04524-001', '21/03/1972', '11954368769'),
+						(11, 'Mariana', '545662668', '13771913039', 'R Sao Antonio, 232 - Vila Universal, Barueri - SP, 06407-140', '05/03/2018', null);
 GO
 
 --- Criando registro na tabela Situacao
@@ -83,11 +86,12 @@ GO
 --- Criando registros na tabela Consulta
 
 INSERT INTO Consulta (IdPaciente, IdMedico, IdSituacao, DataConsulta, Descricao)
-VALUES				 (1, 1, 1, '13/11/2019', 'Doença arterial periférica'),
-					 (2, 1, 1, '20/12/2019', 'Cardiopatia congênita'),
-					 (2, 3, 1, '28/12/2019', 'Caxumba'),
-					 (4, 3, 3, '03/04/2020', 'Infecções no ouvido e na garganta'),
-					 (2, 3, 3, '07/05/2020', 'Catapora'),
-					 (3, 4, 2, '16/05/2021', 'Transtorno bipolar'),
-					 (1, 4, 2, '19/11/2021', 'Transtornos de Ansiedade');
+VALUES				 (7, 3, 1, '14/04/2021', 'Criança com catarro na garganta'),
+					 (2, 2, 2, '28/03/2021', 'Paciente com falta de confiança em si mesmo'),
+					 (3, 2, 1, '29/03/2021', 'Paciente com depressão severa'),
+					 (2, 2, 1, '08/04/2021', 'Paciente com boderline'),
+					 (4, 1, 2, '21/05/2021', 'Paciente verificando se tem alergia a anestesia utilizada na cirurgia'),
+					 (7, 3, 3, '30/03/2021', 'Criança com dor de bronquilote'),
+					 (4, 1, 3, '06/04/2021', 'Paciente com parestesia'),
+					 (4, 1, 2, '09/10/2002', '');
 GO

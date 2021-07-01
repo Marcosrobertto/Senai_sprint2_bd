@@ -92,6 +92,36 @@ namespace senai.sp_medicals.webApi.Controllers
             }
         }
 
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Consultum consultaAtualizada)
+        {
+            try
+            {
+                _consultaRepository.AtualizarPorId(id, consultaAtualizada);
+
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _consultaRepository.Deletar(id);
+
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
 
 
     }

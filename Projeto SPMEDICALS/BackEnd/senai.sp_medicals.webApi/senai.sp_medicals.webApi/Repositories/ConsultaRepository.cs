@@ -16,7 +16,32 @@ namespace senai.sp_medicals.webApi.Repositories
 
         public void AtualizarPorId(int id, Consultum consultaAtualizada)
         {
-            throw new NotImplementedException();
+            Consultum consultaBuscada = ctx.Consulta.Find(id);
+
+            if (consultaAtualizada.IdMedico != null)
+            {
+                consultaAtualizada.IdMedico = consultaAtualizada.IdMedico;
+            }
+            if (consultaAtualizada.IdPaciente != null)
+            {
+                consultaAtualizada.IdPaciente = consultaAtualizada.IdPaciente;
+            }
+            if (consultaAtualizada.IdSituacao != null)
+            {
+                consultaAtualizada.IdSituacao = consultaAtualizada.IdSituacao;
+            }
+            if (consultaAtualizada.Descricao != null)
+            {
+                consultaBuscada.Descricao = consultaAtualizada.Descricao;
+            }
+            if (consultaAtualizada.DataConsulta != Convert.ToDateTime("0001-01-01"))
+            {
+                consultaBuscada.DataConsulta = consultaAtualizada.DataConsulta;
+            }
+
+            ctx.Update(consultaBuscada);
+
+            ctx.SaveChanges();
         }
 
         public Consultum BuscarPorId(int id)
@@ -33,7 +58,12 @@ namespace senai.sp_medicals.webApi.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            Consultum consultaBuscada = ctx.Consulta.FirstOrDefault(u => u.IdConsulta == id);
+
+            ctx.Consulta.Remove(consultaBuscada);
+
+            ctx.SaveChanges();
+
         }
 
         public List<Consultum> ListarConsultasMedico()
