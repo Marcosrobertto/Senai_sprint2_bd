@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using System;
@@ -38,6 +39,27 @@ namespace senai.sp_medicals.webApi
 
             });
 
+            services
+                .AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBeart";
+                })
+
+                .AddJwtBearer("JwtBeart", options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("medicals-chave-Autentificacao")),
+                        ClockSkew = TimeSpan.FromMinutes(30),
+                        ValidIssuer = "medicals.webApi",
+                        ValidAudience = "medicals.webApi"
+
+                    };
+                });
             
 
         }
@@ -50,17 +72,21 @@ namespace senai.sp_medicals.webApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Madicals.webApi");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "medicals.webApi");
                 c.RoutePrefix = string.Empty;
             });
 
+            app.UseAuthentication();
 
-            
-            app.UseRouting();
+            app.UseAuthorization();
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

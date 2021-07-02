@@ -178,6 +178,59 @@ namespace senai.sp_medicals.webApi.Repositories
                                .ToList();
         }
 
+        public List<Consultum> ListarMinhas(int id)
+        {
+            return ctx.Consulta
+
+                               .Include(c => c.IdPacienteNavigation)
+                               .Include(c => c.IdMedicoNavigation)
+                               .Include(c => c.IdSituacaoNavigation)
+                               .Select(c => new Consultum()
+                               {
+                                   IdConsulta = c.IdConsulta,
+                                   Descricao = c.Descricao,
+                                   DataConsulta = c.DataConsulta,
+
+                                   IdMedicoNavigation = new Medico()
+                                   {
+                                       IdMedico = c.IdMedicoNavigation.IdMedico,
+                                       NomeMedico = c.IdMedicoNavigation.NomeMedico,
+                                       IdEspecialidade = c.IdMedicoNavigation.IdEspecialidade,
+                                       IdClinica = c.IdMedicoNavigation.IdClinica,
+
+                                       IdEspecialidadeNavigation = new Especialidade()
+                                       {
+                                           IdEspecialidade = c.IdMedicoNavigation.IdEspecialidadeNavigation.IdEspecialidade,
+                                           Especialidade1 = c.IdMedicoNavigation.IdEspecialidadeNavigation.Especialidade1
+                                       }
+                                   },
+
+
+
+                                   IdPacienteNavigation = new Paciente()
+                                   {
+                                       IdPaciente = c.IdPacienteNavigation.IdPaciente,
+                                       NomePaciente = c.IdPacienteNavigation.NomePaciente,
+                                       DataNascimento = c.IdPacienteNavigation.DataNascimento,
+                                       Rg = c.IdPacienteNavigation.Rg,
+                                       Cpf = c.IdPacienteNavigation.Cpf,
+                                       Endereco = c.IdPacienteNavigation.Endereco
+                                   },
+
+                                   IdSituacaoNavigation = new Situacao()
+                                   {
+                                       IdSituacao = c.IdSituacaoNavigation.IdSituacao,
+                                       Situacao1 = c.IdSituacaoNavigation.Situacao1
+
+                                   }
+
+
+                               })
+
+                               .ToList();
+        }
+
+
         public void MudarDescricao(int id, Consultum status)
         {
             throw new NotImplementedException();

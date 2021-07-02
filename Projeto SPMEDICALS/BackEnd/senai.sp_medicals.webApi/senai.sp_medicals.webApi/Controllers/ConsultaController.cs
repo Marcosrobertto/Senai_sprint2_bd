@@ -64,6 +64,23 @@ namespace senai.sp_medicals.webApi.Controllers
             }
         }
 
+        [HttpGet("minhas")]
+        public IActionResult Get()
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+
+                return Ok(_consultaRepository.ListarMinhas(idUsuario));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+        
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {

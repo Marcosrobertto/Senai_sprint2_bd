@@ -64,7 +64,7 @@ namespace senai.sp_medicals.webApi.Controllers
                 //Define a composição do token
                 var token = new JwtSecurityToken(
                     issuer: "medicals.webApi",
-                    audience: "medical.webApi",
+                    audience: "medicals.webApi",
                     claims: claims,
                     expires: DateTime.Now.AddMinutes(5),
                     signingCredentials: creds

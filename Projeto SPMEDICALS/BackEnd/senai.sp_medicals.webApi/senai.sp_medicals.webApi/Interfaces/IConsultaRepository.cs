@@ -24,5 +24,7 @@ namespace senai.sp_medicals.webApi.Interfaces
 
         List<Consultum> ListarConsultasMedico();
 
+        List<Consultum> ListarMinhas(int id);
+
     }
 }
