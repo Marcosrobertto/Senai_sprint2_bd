@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj": {}
+    "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj": {
+    "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
+        "projectUniqueName": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
         "projectName": "senai.sp_medicals.webApi",
-        "projectPath": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
-        "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\obj\\",
+        "projectPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
+        "packagesPath": "C:\\Users\\Marcos Roberto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\48784309822\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marcos Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

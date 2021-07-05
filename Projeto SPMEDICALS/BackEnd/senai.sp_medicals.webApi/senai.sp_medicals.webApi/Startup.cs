@@ -86,8 +86,6 @@ namespace senai.sp_medicals.webApi
 
             app.UseAuthorization();
 
-            app.UseCors("CorsPolicy");
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
