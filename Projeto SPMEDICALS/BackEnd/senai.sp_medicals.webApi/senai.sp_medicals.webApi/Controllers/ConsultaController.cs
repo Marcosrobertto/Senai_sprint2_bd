@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.sp_medicals.webApi.Domains;
 using senai.sp_medicals.webApi.Interfaces;
@@ -38,32 +39,7 @@ namespace senai.sp_medicals.webApi.Controllers
             }
         }
 
-        [HttpGet("Consulta-paciente")]
-        public IActionResult GetPaciente()
-        {
-            try
-            {
-                return Ok(_consultaRepository.ListarConsultasPaciente());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
-        }
-
-        [HttpGet("Consulta-medico")]
-        public IActionResult GetMedico()
-        {
-            try
-            {
-                return Ok(_consultaRepository.ListarConsultasMedico());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
-        }
-
+        //[Authorize(Roles = "2, 3")]
         [HttpGet("minhas")]
         public IActionResult Get()
         {
