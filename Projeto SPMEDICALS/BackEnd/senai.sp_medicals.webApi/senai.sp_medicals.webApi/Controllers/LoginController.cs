@@ -66,7 +66,7 @@ namespace senai.sp_medicals.webApi.Controllers
                     issuer: "medicals.webApi",
                     audience: "medicals.webApi",
                     claims: claims,
-                    expires: DateTime.Now.AddMinutes(5),
+                    expires: DateTime.Now.AddMinutes(30),
                     signingCredentials: creds
                     );
 

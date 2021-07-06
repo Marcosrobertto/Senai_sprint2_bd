@@ -118,11 +118,11 @@ namespace senai.sp_medicals.webApi.Repositories
                                .ToList();
         }
 
-        public List<Consultum> ListarMinhas(int id)
+        public List<Consultum> ListarMinhas(int idUsuario)
         {
-            Paciente pacienteBuscado = ctx.Pacientes.FirstOrDefault(c => c.IdUsuario == id);
+            Paciente pacienteBuscado = ctx.Pacientes.FirstOrDefault(c => c.IdUsuario == idUsuario);
 
-            Medico medicoBuscado = ctx.Medicos.FirstOrDefault(c => c.IdUsuario == id);
+            Medico medicoBuscado = ctx.Medicos.FirstOrDefault(c => c.IdUsuario == idUsuario);
 
             if (pacienteBuscado != null)
             {

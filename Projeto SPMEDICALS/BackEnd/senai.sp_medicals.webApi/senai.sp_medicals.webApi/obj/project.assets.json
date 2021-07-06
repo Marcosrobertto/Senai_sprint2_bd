@@ -7534,20 +7534,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marcos Roberto\\.nuget\\packages\\": {}
+    "C:\\Users\\48784309822\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
+      "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
       "projectName": "senai.sp_medicals.webApi",
-      "projectPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
-      "packagesPath": "C:\\Users\\Marcos Roberto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcos Roberto\\Documents\\2° Termo SENAI\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\obj\\",
+      "projectPath": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi.csproj",
+      "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\48784309822\\Desktop\\Senai_sprint2_bd\\Projeto SPMEDICALS\\BackEnd\\senai.sp_medicals.webApi\\senai.sp_medicals.webApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Marcos Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\48784309822\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

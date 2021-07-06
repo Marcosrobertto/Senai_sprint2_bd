@@ -26,6 +26,7 @@ namespace senai.sp_medicals.webApi.Controllers
             _consultaRepository = new ConsultaRepository();
         }
 
+        
         [HttpGet("lista")]
         public IActionResult GetConsultas()
         {
@@ -50,9 +51,13 @@ namespace senai.sp_medicals.webApi.Controllers
 
                 return Ok(_consultaRepository.ListarMinhas(idUsuario));
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                return BadRequest(ex);
+                return BadRequest(new 
+                {
+                    mensagem = "Não é possível mostrar as consultas se o usuário não estiver logado!",
+                    error
+                });
             }
         }
         
