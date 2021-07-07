@@ -126,20 +126,21 @@ namespace senai.sp_medicals.webApi.Repositories
 
             if (pacienteBuscado != null)
             {
-                return ctx.Consulta.Where(c => c.IdPaciente == pacienteBuscado.IdPaciente)
+                return ctx.Consulta
                     .Include(c => c.IdPacienteNavigation)
                     .Include(c => c.IdMedicoNavigation)
                     .Include(c => c.IdSituacaoNavigation)
                     .Include(c => c.IdMedicoNavigation.IdEspecialidadeNavigation)
-                    .Select(c => new Consultum 
-                    { 
-                        IdConsulta = c.IdConsulta,
-                        IdMedicoNavigation = c.IdMedicoNavigation,
-                        IdPacienteNavigation = c.IdPacienteNavigation,
-                        IdSituacaoNavigation = c.IdSituacaoNavigation,
-                        Descricao = c.Descricao,
-                        DataConsulta = c.DataConsulta
-                    })
+                    //.Select(c => new Consultum
+                    //{
+                    //    IdConsulta = c.IdConsulta,
+                    //    IdMedicoNavigation = c.IdMedicoNavigation,
+                    //    IdPacienteNavigation = c.IdPacienteNavigation,
+                    //    IdSituacaoNavigation = c.IdSituacaoNavigation,
+                    //    Descricao = c.Descricao,
+                    //    DataConsulta = c.DataConsulta
+                    //})
+                    .Where(c => c.IdPaciente == pacienteBuscado.IdPaciente)
                     .ToList();
 
             }

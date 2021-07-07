@@ -135,4 +135,4 @@ C:\Users\Marcos Roberto\Documents\2° Termo SENAI\Senai_sprint2_bd\Projeto SPMED
 C:\Users\Marcos Roberto\Documents\2° Termo SENAI\Senai_sprint2_bd\Projeto SPMEDICALS\BackEnd\senai.sp_medicals.webApi\senai.sp_medicals.webApi\obj\Debug\net5.0\senai.sp_medicals.webApi.xml
 C:\Users\48784309822\Desktop\Senai_sprint2_bd\Projeto SPMEDICALS\BackEnd\senai.sp_medicals.webApi\senai.sp_medicals.webApi\bin\Debug\net5.0\senai.sp_medicals.webApi.xml
 C:\Users\48784309822\Desktop\Senai_sprint2_bd\Projeto SPMEDICALS\BackEnd\senai.sp_medicals.webApi\senai.sp_medicals.webApi\obj\Debug\net5.0\senai.sp_medicals.webApi.xml
-C:\Users\48784309822\Desktop\Senai_sprint2_bd\Projeto SPMEDICALS\BackEnd\senai.sp_medicals.webApi\senai.sp_medicals.webApi\obj\Debug\net5.0\senai.sp_medicals.webApi.csproj.AssemblyReference.cache
+C:\Users\48784309822\Desktop\Senai_sprint2_bd\Projeto SPMEDICALS\BackEnd\senai.sp_medicals.webApi\senai.sp_medicals.webApi\obj\Debug\net5.0\senai.sp_medicals.webApi.csprojAssemblyReference.cache

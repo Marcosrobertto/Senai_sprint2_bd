@@ -26,7 +26,7 @@ namespace senai.sp_medicals.webApi.Controllers
             _consultaRepository = new ConsultaRepository();
         }
 
-        
+        [Authorize]
         [HttpGet("lista")]
         public IActionResult GetConsultas()
         {
@@ -47,7 +47,6 @@ namespace senai.sp_medicals.webApi.Controllers
             try
             {
                 int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-
 
                 return Ok(_consultaRepository.ListarMinhas(idUsuario));
             }

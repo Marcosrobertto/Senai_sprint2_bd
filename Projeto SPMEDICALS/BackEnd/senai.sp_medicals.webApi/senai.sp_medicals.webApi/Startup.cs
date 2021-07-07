@@ -43,17 +43,17 @@ namespace senai.sp_medicals.webApi
                 .AddAuthentication(options =>
                 {
                     options.DefaultAuthenticateScheme = "JwtBearer";
-                    options.DefaultChallengeScheme = "JwtBeart";
+                    options.DefaultChallengeScheme = "JwtBearer";
                 })
 
-                .AddJwtBearer("JwtBeart", options =>
+                .AddJwtBearer("JwtBearer", options =>
                 {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("medicals-chave-Autentificacao")),
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("medicals-chave-Autenticacao")),
                         ClockSkew = TimeSpan.FromMinutes(30),
                         ValidIssuer = "medicals.webApi",
                         ValidAudience = "medicals.webApi"
