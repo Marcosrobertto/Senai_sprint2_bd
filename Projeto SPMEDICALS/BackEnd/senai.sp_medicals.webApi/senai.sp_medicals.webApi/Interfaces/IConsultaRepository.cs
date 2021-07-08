@@ -10,7 +10,7 @@ namespace senai.sp_medicals.webApi.Interfaces
     {
         Consultum BuscarPorId(int id);
 
-        void MudarDescricao(int id, Consultum status);
+        void MudarDescricao(int id, Consultum novaDescricao);
 
         void Cadastrar(Consultum novaConsulta);
 

@@ -169,9 +169,18 @@ namespace senai.sp_medicals.webApi.Repositories
         }
 
 
-        public void MudarDescricao(int id, Consultum status)
+        public void MudarDescricao(int id, Consultum novaDescricao)
         {
-            throw new NotImplementedException();
+            Consultum ConsultumBuscado = ctx.Consulta.Find(id);
+
+            if (novaDescricao.Descricao != null)
+            {
+                ConsultumBuscado.Descricao = novaDescricao.Descricao;
+            }
+
+            ctx.Consulta.Update(ConsultumBuscado);
+
+            ctx.SaveChanges();
         }
     }
 }

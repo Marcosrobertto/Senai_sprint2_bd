@@ -59,6 +59,26 @@ namespace senai.sp_medicals.webApi.Controllers
                 });
             }
         }
+
+        [Authorize(Roles = "2")]
+        [HttpPatch("descricao/{id}")]
+        public IActionResult AtualizaDescricao(int id, Consultum Descricao)
+        {
+            try
+            {
+                _consultaRepository.MudarDescricao(id, Descricao);
+
+                return StatusCode(204);
+            }
+            catch (Exception error)
+            {
+                return BadRequest(new
+                {
+                    mensagem = "Somente um Médico pode aterar a Descriçao!",
+                    error
+                });
+            }
+        }
         
 
         [HttpGet("{id}")]
